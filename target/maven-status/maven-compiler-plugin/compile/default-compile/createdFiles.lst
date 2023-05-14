@@ -7,6 +7,7 @@ com\mycompany\pharmacy\entities\Pharmacien.class
 com\mycompany\pharmacy\dao\PharmacienDao.class
 com\mycompany\pharmacy\dao\MedicamentDao.class
 com\mycompany\pharmacy\aide\ConnectionDB.class
+com\mycompany\pharmacy\servlets\LoginPharmacienServlet.class
 com\mycompany\pharmacy\entities\Medicament.class
 com\mycompany\pharmacy\servlets\PharmacieRegisterServlet.class
 com\mycompany\pharmacy\entities\Pharmacie.class

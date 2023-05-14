@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 // Importez les bibliothèques nécessaires de JavaMail
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import java.util.Properties;
-import com.twilio.Twilio;
-import com.twilio.rest.api.v2010.account.Message;
-import com.twilio.type.PhoneNumber;
+//import javax.mail.*;
+//import javax.mail.internet.InternetAddress;
+//import javax.mail.internet.MimeMessage;
+//import java.util.Properties;
+//import com.twilio.Twilio;
+//import com.twilio.rest.api.v2010.account.Message;
+//import com.twilio.type.PhoneNumber;
 
 public class PharmacienRegisterServlet extends HttpServlet {
 
@@ -47,7 +47,7 @@ public class PharmacienRegisterServlet extends HttpServlet {
             }
             
             // Envoyer le code de vérification par SMS
-            sendVerificationCodeSMS(tel, verificationCode);
+            //sendVerificationCodeSMS(tel, verificationCode);
             
             Pharmacien pharmacien = new Pharmacien();
 
@@ -86,28 +86,28 @@ public class PharmacienRegisterServlet extends HttpServlet {
         return String.valueOf(code);
     }
 
-    private void sendVerificationCodeSMS(String phoneNumber, String verificationCode) {
-        // Configurez les informations d'authentification pour Twilio
-        final String accountSid = "ACbccf7feec97fa1d548e38a1d1e2c1acb";
-        final String authToken = "610d906930ebeb4b8c447703c548f068";
-        final String twilioPhoneNumber = "+12707976580";
-
-        // Initialisez la connexion Twilio
-        Twilio.init(accountSid, authToken);
-
-        try {
-            // Envoyez le SMS contenant le code de vérification
-            Message.creator(
-                    new PhoneNumber(phoneNumber),
-                    new PhoneNumber(twilioPhoneNumber),
-                    "Votre code de vérification est : " + verificationCode)
-                    .create();
-
-            //System.out.println(message.getSid());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    private void sendVerificationCodeSMS(String phoneNumber, String verificationCode) {
+//        // Configurez les informations d'authentification pour Twilio
+//        final String accountSid = "ACbccf7feec97fa1d548e38a1d1e2c1acb";
+//        final String authToken = "610d906930ebeb4b8c447703c548f068";
+//        final String twilioPhoneNumber = "+12707976580";
+//
+//        // Initialisez la connexion Twilio
+//        Twilio.init(accountSid, authToken);
+//
+//        try {
+//            // Envoyez le SMS contenant le code de vérification
+//            Message.creator(
+//                    new PhoneNumber(phoneNumber),
+//                    new PhoneNumber(twilioPhoneNumber),
+//                    "Votre code de vérification est : " + verificationCode)
+//                    .create();
+//
+//            //System.out.println(message.getSid());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     
     
