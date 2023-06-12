@@ -1,11 +1,13 @@
-
 package com.mycompany.pharmacy.entities;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,7 +25,10 @@ public class Medicament {
     private String dateFabrication;
     private String dateExp;
     private String image;
-
+    
+    @ManyToMany(mappedBy = "medicaments")
+    private List<Pharmacie> pharmacies = new ArrayList<>();
+    
     public Medicament() {
     }
 
@@ -37,22 +42,11 @@ public class Medicament {
         this.image = image;
     }
 
-    public Medicament(int idMedicament, String nom, String description, int prixUnitaire, int quantite, String dateFabrication, String dateExp, String image) {
-        this.idMedicament = idMedicament;
-        this.nom = nom;
-        this.description = description;
-        this.prixUnitaire = prixUnitaire;
-        this.quantite = quantite;
-        this.dateFabrication = dateFabrication;
-        this.dateExp = dateExp;
-        this.image = image;
-    }
-
-    public int getidMedicament() {
+    public int getIdMedicament() {
         return idMedicament;
     }
 
-    public void setidMedicament(int idMedicament) {
+    public void setIdMedicament(int idMedicament) {
         this.idMedicament = idMedicament;
     }
 
@@ -80,11 +74,11 @@ public class Medicament {
         this.prixUnitaire = prixUnitaire;
     }
 
-    public int getQnt() {
+    public int getQuantite() {
         return quantite;
     }
 
-    public void setQnt(int quantite) {
+    public void setQuantite(int quantite) {
         this.quantite = quantite;
     }
 
@@ -96,11 +90,11 @@ public class Medicament {
         this.dateFabrication = dateFabrication;
     }
 
-    public String getDateExpiration() {
+    public String getDateExp() {
         return dateExp;
     }
 
-    public void setDateExpiration(String dateExp) {
+    public void setDateExp(String dateExp) {
         this.dateExp = dateExp;
     }
 
@@ -112,9 +106,16 @@ public class Medicament {
         this.image = image;
     }
 
+    public List<Pharmacie> getPharmacies() {
+        return pharmacies;
+    }
+
+    public void setPharmacies(List<Pharmacie> pharmacies) {
+        this.pharmacies = pharmacies;
+    }
+
     @Override
     public String toString() {
-        return "Medicament{" + "id=" + idMedicament + ", nom=" + nom + ", description=" + description + ", prixUnitaire=" + prixUnitaire + ", qnt=" + quantite + ", dateFabrication=" + dateFabrication + ", dateExpiration=" + dateExp + ", image=" + image + '}';
+        return "Medicament{" + "idMedicament=" + idMedicament + ", nom=" + nom + ", description=" + description + ", prixUnitaire=" + prixUnitaire + ", quantite=" + quantite + ", dateFabrication=" + dateFabrication + ", dateExp=" + dateExp + ", image=" + image + ", pharmacies=" + pharmacies + '}';
     }
-    
 }

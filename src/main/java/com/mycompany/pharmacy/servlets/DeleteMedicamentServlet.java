@@ -40,7 +40,7 @@ public class DeleteMedicamentServlet extends HttpServlet {
                 
                 HttpSession httpSession = request.getSession();
                 httpSession.setAttribute("messages", "Medicament supprimer avec sucess...");
-                response.sendRedirect("ManageMedication.jsp");
+                response.sendRedirect("medicament.jsp");
             } catch (Exception e) {
                 e.printStackTrace();
             }

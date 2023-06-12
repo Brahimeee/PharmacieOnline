@@ -1,7 +1,7 @@
 package com.mycompany.pharmacy.servlets;
 
 import com.mycompany.pharmacy.aide.ConnectionDB;
-import com.mycompany.pharmacy.aide.EnvoyerEmail;
+//import com.mycompany.pharmacy.aide.EnvoyerEmail;
 import com.mycompany.pharmacy.dao.PharmacienDao;
 import com.mycompany.pharmacy.entities.Pharmacien;
 import java.io.IOException;

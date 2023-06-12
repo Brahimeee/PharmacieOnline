@@ -26,6 +26,7 @@
         </property>
         <mapping class="com.mycompany.pharmacy.entities.Medicament" />
         <mapping class="com.mycompany.pharmacy.entities.Pharmacien" />
-       
+        <mapping class="com.mycompany.pharmacy.entities.Pharmacie" />
+        <mapping class="com.mycompany.pharmacy.entities.Client" />
     </session-factory>
 </hibernate-configuration>

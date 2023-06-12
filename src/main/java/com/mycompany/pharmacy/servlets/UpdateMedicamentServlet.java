@@ -55,11 +55,11 @@ public class UpdateMedicamentServlet extends HttpServlet {
 
                 medicament.setPrixUnitaire(prixUnitaire);
 
-                medicament.setQnt(qnt);
+                medicament.setQuantite(qnt);
 
                 medicament.setDateFabrication(dateFabrication);
 
-                medicament.setDateExpiration(dateExpiration);
+                medicament.setDateExp(dateExpiration);
 
                 medicament.setImage(part.getSubmittedFileName());
 
@@ -101,7 +101,7 @@ public class UpdateMedicamentServlet extends HttpServlet {
 
             httpSession.setAttribute("messages", "Medicament modifier avec sucess...");
 
-            response.sendRedirect("ManageMedication.jsp");
+            response.sendRedirect("medicament.jsp");
 
             return;
         }

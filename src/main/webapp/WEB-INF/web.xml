@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
     <servlet>
         <servlet-name>AddMedicamentServlet</servlet-name>
         <servlet-class>com.mycompany.pharmacy.servlets.AddMedicamentServlet</servlet-class>
@@ -19,6 +20,14 @@
     <servlet>
         <servlet-name>PharmacieRegisterServlet</servlet-name>
         <servlet-class>com.mycompany.pharmacy.servlets.PharmacieRegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientRegisterServlet</servlet-name>
+        <servlet-class>com.mycompany.pharmacy.servlets.ClientRegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientLoginServlet</servlet-name>
+        <servlet-class>com.mycompany.pharmacy.servlets.ClientLoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VerifyCode</servlet-name>
@@ -55,6 +64,14 @@
     <servlet-mapping>
         <servlet-name>LoginPharmacienServlet</servlet-name>
         <url-pattern>/LoginPharmacienServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientRegisterServlet</servlet-name>
+        <url-pattern>/ClientRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientLoginServlet</servlet-name>
+        <url-pattern>/ClientLoginServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

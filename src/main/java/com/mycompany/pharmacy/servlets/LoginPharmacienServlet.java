@@ -36,7 +36,7 @@ public class LoginPharmacienServlet extends HttpServlet {
             }else {       
                //Login
                httpSession.setAttribute("current-user", pharmacien);
-               response.sendRedirect("ManageMedication.jsp");
+               response.sendRedirect("dashboard_pharmacien.jsp");
             }
         }
     }

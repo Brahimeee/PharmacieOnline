@@ -26,7 +26,7 @@
             <form action="../UpdateMedicamentServlet" method="post" enctype="multipart/form-data">
                 <div class="user-details">
                     <input name="idMedicament" type="hidden"
-                           value="<%= medicament.getidMedicament()%>"/>
+                           value="<%= medicament.getIdMedicament() %>"/>
                     <div class="input-box">
                         <span class="details">Nom du Médicament</span>
                         <input name="nom" type="text" placeholder="nom" required value="<%= medicament.getNom()%>"/>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Quantité</span>
-                        <input name="qnt" type="number" placeholder="quantité" required value="<%= medicament.getQnt()%>"/>
+                        <input name="qnt" type="number" placeholder="quantité" required value="<%= medicament.getQuantite()%>"/>
                     </div>
                     <div class="input-box">
                         <span class="details">Date de fabrication</span>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Date d'expiration</span>
-                        <input name="dateExpiration" type="date" style="cursor: pointer;" value="<%= medicament.getDateExpiration()%>"/>
+                        <input name="dateExpiration" type="date" style="cursor: pointer;" value="<%= medicament.getDateExp() %>"/>
                     </div>
                     <div class="input-box">
                         <span class="details">Image</span>
